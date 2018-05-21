@@ -1,0 +1,91 @@
+body{
+    overflow-x: hidden;
+    background-color: #eee;;
+}
+
+h1{
+    margin: 50px 0;
+}
+
+h2{
+    font-size: 20px;
+        line-height: 23px;
+}
+.card{
+    margin: 0;
+    padding:1px 1px 0 0;
+    height: 150px;;
+   border:0;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+}
+
+.card-body{
+    height: 0;
+    padding: 0;
+    background-color: rgba(238, 238, 238, 0.71);
+    position: relative;
+    z-index: 1;
+   overflow: hidden;
+  
+    
+}
+
+
+
+.card-body{
+     position: absolute;
+    bottom:0;
+    right: 0;
+    width: 100%;
+    animation-duration: 1s;
+    
+}
+.card-title{
+    margin: 0;
+    
+   
+}
+
+.card:hover .card-body{
+    height: auto;
+    padding: 20px 0; 
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+    animation-name: inUp;
+   
+}
+
+
+
+    
+@keyframes inUp {
+ 
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+    to {
+    transform: translate3d(0, 0, 0);
+  }
+}
