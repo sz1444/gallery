@@ -17,9 +17,9 @@
             <h1 class="text-center">Galeria Zdjęć</h1>
             <div class="row">
                
-                <div class="col-lg-3 col-md-6 col-sm-6 card" v-for="(item, index) in items" :key="index" @click="greet(index)">
+                <div class="col-lg-3 col-md-6 col-sm-6 card" v-for="(item, index) in items" :key="index" >
 >
-                    <img :src="item.url" :alt="item.name" data-toggle="modal" data-target="#exampleModalCenter">
+                    <img :src="item.url" :alt="item.name" data-toggle="modal" data-target="#exampleModalCenter" @click="greet(index)">
                     <div class="card-body">
                         <h2 class="card-title text-center">{{item.name}}</h2>
                     </div>
@@ -36,8 +36,9 @@
                                     <img v-bind:src="imgSrc" alt="">
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button @click="next">next</button>
+                                    
+                                    <button type="button" class="btn btn-info float-left" @click="back">Back</button>
+                                    <button type="button" class="btn btn-info" @click="next">Next</button>
                                 </div>
                             </div>
                         </div>
