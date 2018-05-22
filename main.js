@@ -6,7 +6,7 @@ new Vue({
     imgTitle:' '  
   },
   mounted() {
-    axios.get("http://5b02ff4820848e001432ca08.mockapi.io/img/img")
+    axios.get("https://5b02ff4820848e001432ca08.mockapi.io/img/img")
     .then(response => {this.items = response.data})
   },
     methods: {
