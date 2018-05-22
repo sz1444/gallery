@@ -11,12 +11,12 @@ return {
    },
 
     methods: {
-        greet: function (index) {
+        greet (index) {
             this.imgSrc = this.items[index].url
             this.imgTitle = this.items[index].name
             this.id = index
         },
-        fetchData: function () {
+        fetchData () {
             let self = this
             const myRequest = new Request('https://5b02ff4820848e001432ca08.mockapi.io/img/img')
 
@@ -31,7 +31,7 @@ return {
                 });
         },
 
-        next: function () {
+        next () {
             if (this.id == this.items.length - 1) {
                 this.id = -1;
             }
@@ -40,7 +40,7 @@ return {
             this.imgTitle = this.items[this.id].name
         },
 
-        back: function () {
+        back () {
             if (this.id == 0) {
                 this.id = 9;
             }
