@@ -1,94 +1,103 @@
-body{
+body {
     overflow-x: hidden;
-    background-color: #eee;;
+    background-color: #eee;
+    ;
 }
 
-h1{
+h1 {
     margin: 50px 0;
 }
 
-h2{
+h2 {
     font-size: 20px;
-        line-height: 23px;
+    line-height: 23px;
 }
-.card{
-    padding:1px 1px 0 0;
-   border:0;
-    height: 300px;
+
+.card {
+    padding: 1px 1px 0 0;
+    border: 0;
+    height: 350px;
     position: relative;
     cursor: pointer;
     overflow: hidden;
 }
 
-img{
+img {
     width: 100%;
 }
 
-.card > img{
-    position:absolute;
-    min-height: 300px;
-    left:0;right: 0;
+.card > img {
+    position: absolute;
+    min-height: 350px;
+    left: 0;
+    right: 0;
     object-fit: cover;
+    opacity: .8;
+    transition-duration: .3s;
 }
 
 
 
 
 
-.card-body{
-     height: 0;
+.card-body {
+    height: 0;
     padding: 0;
     background-color: rgba(238, 238, 238, 0.71);
     z-index: 1;
-     position: absolute;
-    bottom:0;
+    position: absolute;
+    bottom: 0;
     right: 0;
     width: 100%;
     animation-duration: 1s;
-       overflow: hidden;
+    overflow: hidden;
 
-    
+
 }
-.card-title{
+
+.card-title {
     margin: 0;
-    
-   
+
 }
 
-.card:hover .card-body{
-    height: auto;
-    padding: 20px 0; 
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-    animation-name: inUp;
-   
-}
-
-
-
-    
-@keyframes inUp {
- 
-
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -100px, 0);
-  }
-
-  60% {
+.card:hover img {
     opacity: 1;
-    transform: translate3d(0, 25px, 0);
-  }
+}
 
-  75% {
-    transform: translate3d(0, -10px, 0);
-  }
+.card:hover .card-body {
+    height: auto;
+    padding: 20px 0;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-name: inUp;
 
-  90% {
-    transform: translate3d(0, 5px, 0);
-  }
+}
+
+
+
+
+@keyframes inUp {
+
+
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, 5px, 0);
+    }
 
     to {
-    transform: translate3d(0, 0, 0);
-  }
+        transform: translate3d(0, 0, 0);
+    }
 }
