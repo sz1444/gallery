@@ -18,6 +18,8 @@ new Vue({
             this.imgSrc = this.items[index].url
             this.imgTitle = this.items[index].name
             this.id = index
+        },
+         alert: function() {
             alert(this.items[1].url)
         },
         next: function () {
