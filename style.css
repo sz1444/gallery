@@ -100,7 +100,7 @@ img:hover {
     }
 }
 
-@media(min-width:560) {
+@media(min-width:560px) {
     .card:hover .card-body {
         height: auto;
         padding: 20px 0;
