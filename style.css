@@ -1,7 +1,6 @@
 body {
     overflow-x: hidden;
     background-color: #eee;
-    ;
 }
 
 h1 {
@@ -14,8 +13,9 @@ h2 {
 }
 
 .card {
-    padding: 1px 1px 0 0;
+    background-color: transparent;
     border: 0;
+    padding: 0;
     height: 350px;
     position: relative;
     cursor: pointer;
@@ -34,11 +34,8 @@ img {
     object-fit: cover;
     opacity: .8;
     transition-duration: .3s;
+    padding: 1px 1px 0 0;
 }
-
-
-
-
 
 .card-body {
     height: 0;
@@ -51,8 +48,6 @@ img {
     width: 100%;
     animation-duration: 1s;
     overflow: hidden;
-
-
 }
 
 .card-title {
@@ -60,7 +55,7 @@ img {
 
 }
 
-.card:hover img {
+img:hover {
     opacity: 1;
 }
 
@@ -74,13 +69,15 @@ img {
 }
 
 .modal-body{
-    padding:0;
+    padding: 0;
+}
+
+.modal-footer{
+    justify-content: space-between;
 }
 
 
 @keyframes inUp {
-
-
     0% {
         opacity: 0;
         transform: translate3d(0, -100px, 0);
