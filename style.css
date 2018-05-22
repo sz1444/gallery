@@ -12,10 +12,9 @@ h2{
         line-height: 23px;
 }
 .card{
-    margin: 0;
     padding:1px 1px 0 0;
-    height: 190px;;
    border:0;
+    height: 300px;
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -25,25 +24,29 @@ img{
     width: 100%;
 }
 
-.card-body{
-    height: 0;
-    padding: 0;
-    background-color: rgba(238, 238, 238, 0.71);
-    position: relative;
-    z-index: 1;
-   overflow: hidden;
-  
-    
+.card img{
+    position:absolute;
+    min-height: 300px;
+    left:0;right: 0;
+    object-fit: cover;
 }
 
 
 
+
+
 .card-body{
+     height: 0;
+    padding: 0;
+    background-color: rgba(238, 238, 238, 0.71);
+    z-index: 1;
      position: absolute;
     bottom:0;
     right: 0;
     width: 100%;
     animation-duration: 1s;
+       overflow: hidden;
+
     
 }
 .card-title{
