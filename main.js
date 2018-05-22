@@ -5,8 +5,6 @@ new Vue({
         error: ' ',
         imgSrc: ' ',
         imgTitle: ' ',
-        nextImg: '',
-        nextTitle: '',
         id: ''
     },
     mounted() {
@@ -27,6 +25,7 @@ new Vue({
             }
             this.id += 1
             this.imgSrc = this.items[this.id].url
+            this.imgTitle = this.items[this.id].name
         },
 
         back: function () {
@@ -35,6 +34,7 @@ new Vue({
             }
             this.id -= 1
             this.imgSrc = this.items[this.id].url
+            this.imgTitle = this.items[this.id].name
         }
     }
 
