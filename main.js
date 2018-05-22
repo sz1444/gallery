@@ -19,9 +19,7 @@ new Vue({
             this.imgTitle = this.items[index].name
             this.id = index
         },
-         alert: function() {
-            alert(this.items[1].url)
-        },
+    
         next: function () {
             if (this.id == this.items.length - 1) {
                 this.id = -1;
