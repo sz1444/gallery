@@ -18,6 +18,7 @@ new Vue({
             this.imgSrc = this.items[index].url
             this.imgTitle = this.items[index].name
             this.id = index
+            alert(this.items[1].url)
         },
         next: function () {
             if (this.id == this.items.length - 1) {
