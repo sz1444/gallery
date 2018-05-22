@@ -73,7 +73,9 @@ img {
 
 }
 
-
+.modal-body{
+    padding:0;
+}
 
 
 @keyframes inUp {
