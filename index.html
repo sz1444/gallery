@@ -15,14 +15,14 @@
 <body>
     <div id="app">
         <div class="container">
-            <h1 class="text-center">Galeria Zdjęć</h1>
+            <h1  @click="alert" class="text-center">Galeria Zdjęć</h1>
             <div class="row">
                
                 <div class="col-lg-3 col-md-6 col-sm-6 card" v-for="(item, index) in items" :key="index" >
 >
                     <img :src="item.url" :alt="item.name" data-toggle="modal" data-target="#exampleModalCenter" @click="greet(index)">
                     <div class="card-body">
-                        <h2 @click="alert" class="card-title text-center">{{item.name}}</h2>
+                        <h2 class="card-title text-center">{{item.name}}</h2>
                     </div>
                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
