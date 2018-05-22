@@ -19,13 +19,22 @@ new Vue({
         greet: function (index) {
             this.imgSrc = this.items[index].url
             this.imgTitle = this.items[index].name
-            this.nextImg = this.items[index + 1].url
             this.id = index
         },
         next: function () {
-            this.id=this.id+1
-            document.querySelector('.modal-body img').src= this.items[this.id].url 
-            console.log(this.id)
+            if (this.id == this.items.length - 1) {
+                this.id = -1;
+            }
+            this.id += 1
+            this.imgSrc = this.items[this.id].url
+        },
+
+        back: function () {
+            if (this.id == 0) {
+                this.id = 9;
+            }
+            this.id -= 1
+            this.imgSrc = this.items[this.id].url
         }
     }
 
