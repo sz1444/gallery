@@ -59,20 +59,12 @@ img:hover {
     opacity: 1;
 }
 
-.card:hover .card-body {
-    height: auto;
-    padding: 20px 0;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    animation-name: inUp;
 
-}
-
-.modal-body{
+.modal-body {
     padding: 0;
 }
 
-.modal-footer{
+.modal-footer {
     justify-content: space-between;
 }
 
@@ -98,5 +90,23 @@ img:hover {
 
     to {
         transform: translate3d(0, 0, 0);
+    }
+}
+
+@media(max-width:560px) {
+    .card-body {
+        height: auto;
+        padding: 20px 0;
+    }
+}
+
+@media(min-width:560) {
+    .card:hover .card-body {
+        height: auto;
+        padding: 20px 0;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: inUp;
+
     }
 }
