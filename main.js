@@ -1,12 +1,14 @@
 var app = new Vue({
     el: '#app',
-    data: {
+    data() {
+return {
         items: [],
         error: ' ',
         imgSrc: ' ',
         imgTitle: ' ',
         id: ''
-    },
+    }
+   },
 
     methods: {
         greet: function (index) {
