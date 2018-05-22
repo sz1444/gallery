@@ -24,7 +24,7 @@ img{
     width: 100%;
 }
 
-.card img{
+.card > img{
     position:absolute;
     min-height: 300px;
     left:0;right: 0;
